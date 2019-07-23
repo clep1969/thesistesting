@@ -1,0 +1,271 @@
+@font-face	{
+	font-family: 'Roboto Black';
+	src: url('../_fonts/roboto/Roboto-Black.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face	{
+	font-family: 'Roboto Medium';
+	src: url('../_fonts/roboto/Roboto-Medium.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face	{
+	font-family: 'Roboto Light';
+	src: url('../_fonts/roboto/Roboto-Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?prwxc0');
+	src:  url('../fonts/icomoon.eot?prwxc0#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?prwxc0') format('truetype'),
+		url('../fonts/icomoon.woff?prwxc0') format('woff'),
+		url('../fonts/icomoon.svg?prwxc0#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--sidebar-width: 240px;
+	--sidebar-bg-colour: rgba(255,255,255,0.3);
+}
+
+*, html, body, h1, p, ul, li, input	{
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font-size: 100%;
+	line-height: 100%;
+	color: #fff;
+}
+
+#hamburger-menu-toggle-1	{	display: none;	}
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+	content: "\e9bd";
+}
+.icon-eye:before {
+	content: "\e9ce";
+}
+.icon-eye-blocked:before {
+	content: "\e9d1";
+}
+body	{
+	background-image: url('../_images/Background.png');
+	background-position: top center;
+}
+
+.wrapper {
+	display: flex;
+	align-items: stretch;
+	min-height: 100vh;
+}
+
+.main-content	{
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
+	width: 100vw;
+}
+.sidebar	{
+	display: none;
+}
+
+.menu-toggle {
+	display: initial;
+}
+
+header	{	margin: 2rem 4rem;	}
+ul	{	list-style: none;	}
+h1	{	font-family: 'Roboto Black', Helvetica, Arial, sans-serif;	}
+li	{
+	list-style-type: none;
+	font-family: 'Roboto Medium', Helvetica, Arial, sans-serif;
+}
+p	{	font-family: 'Roboto Light', Helvetica, Arial, sans-serif;	}
+a	{
+	text-decoration: none;
+}
+a:hover	{	font-weight: bold !important;	}
+header, footer	{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
+header h1	{
+	flex-basis: 1;
+	font-size: 2rem;
+}
+header nav	{
+	flex-basis: 2;
+	display: none;
+}
+header button	{
+	flex-basis: 1;
+}
+header li, footer li	{
+	display: inline-block;
+	margin-right: 1.25rem;
+}
+header li:last-child	{	margin-right: 0;	}
+main	{
+	display: flex;
+	flex-direction: column;
+	margin: 6rem auto;
+}
+article	{
+	width: calc(100% - 8rem);
+	margin: 2rem 4rem;
+}
+article h1	{
+	font-size: 3rem;
+	line-height: 3.6rem;
+	margin-bottom: 1.5rem;
+}
+article p	{
+	font-size: 1.125rem;
+	line-height: 140%;
+}
+aside h1	{
+	font-family: 'Roboto Light', Helvetica, Arial, sans-serif;
+	font-size: 1.25rem;
+	letter-spacing: 2px;
+	line-height: 100%;
+	text-align: center;
+	text-transform: uppercase;
+}
+aside p	{
+	text-align: center;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	color: rgba(255,255,255,0.5);
+}
+aside a	{	color: #fff;	}
+aside a:hover	{	text-decoration: underline;	}
+aside h1	{	margin-top: 1rem;	}
+form	{
+	display: block;
+	width: calc(100% - 8rem);
+	margin: 1.5rem 4rem;
+	border: 1px solid white;
+	border-radius: 0.25rem;
+}
+form input, form div	{
+	display: block;
+	width: 100%;
+	padding: 0.75rem;
+	background-color: rgba(255,255,255,0.3);
+	border:1px solid rgba(255,255,255,0.3);
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	box-sizing: border-box;
+}
+form input[type=submit]	{
+	background-color: rgb(43,128,194);
+	color: white;
+}
+form input[type=checkbox]	{	display: none;	}
+::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
+	color: white;
+}
+
+::placeholder {
+	opacity: 1;
+}
+label	{
+	top: -1rem;
+}
+label.showPassword::before	{	content: "\e9ce";	}
+label.hidePassword::before	{	content: "\e9d1";	}
+form div	{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: middle;
+	background-color: rgba(255,255,255,0.3);
+	padding: 0;
+}
+form div input#password, form div input#togglePass	{
+	border: 0;
+	padding: 0.75rem;
+	background-color: rgba(255,255,255,0);
+}
+.icon-eye, .icon-eye-blocked	{
+	padding: 0.75rem !important;
+}
+footer p	{
+	font-size: 0.5rem;
+	margin-left: 4rem;
+}
+footer ul	{	margin-right: 3rem;	}
+footer li	{
+	font-size: 0.625rem;
+	text-transform: uppercase;
+	margin-bottom: 0.25rem;
+}
+.sidebar ul	{
+	margin-top: 2rem;
+	margin-left: 0;
+}
+.sidebar ul li	{
+	font-size: 1.25rem;
+	line-height: 2.5rem;
+	padding: 0 1rem;
+	margin: 0 0 0 -2rem;
+	width: var(--sidebar-width) !important;
+}
+
+#hamburger-menu-toggle-1:checked ~ .sidebar	{	display: initial;	}
+
+@media only screen and (min-width: 641px)	{
+	header nav	{	display: initial;	}
+	
+	article	{	margin: 1rem 4rem;	}
+	
+	article h1	{
+		font-size: 4.25rem;
+		line-height: 5rem;
+		margin-bottom: 2rem;
+	}
+	
+	article p	{
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 768px)	{
+	main	{	flex-direction: row !important;	}
+	
+	article, aside	{
+		flex-shrink: 1;
+		width: calc(50% - 4rem) !important;
+		margin-right: 4rem;
+	}
+	
+	article h1	{
+		font-size: 5.625rem;
+		line-height: 5.75rem;
+		margin-bottom: 2.5rem;
+	}
+	
+	article p	{
+		font-size: 1.875rem;
+	}
+}

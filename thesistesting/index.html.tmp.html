@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+		<title>Stamp.</title>
+		<style>
+			@font-face	{
+				font-family: 'Roboto Black';
+				src: url('_fonts/roboto/Roboto-Black.ttf');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face	{
+				font-family: 'Roboto Medium';
+				src: url('_fonts/roboto/Roboto-Medium.ttf');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face	{
+				font-family: 'Roboto Light';
+				src: url('_fonts/roboto/Roboto-Light.ttf');
+				font-weight: normal;
+				font-style: normal;
+			}
+		</style>
+		<link rel="stylesheet" href="_styles/styles.css" type="text/css" />
+		<link rel="stylesheet" href="https://i.icomoon.io/public/temp/e902ab29d2/UntitledProject/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<input id="hamburger-menu-toggle-1" type="checkbox">
+			<div class="main-content">
+				<header>
+					<h1><a href="file:///Users/chrislepore/Sites/projects/thesistesting/">Stamp</a></h1>
+					<nav class="header__main-navigation">
+						<ul>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Integrations</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Contacts</a></li>
+						</ul>
+					</nav>
+					<label class="button icon-menu" data-menu-toggle for="hamburger-menu-toggle-1"></label>
+				</header>
+				<main>
+					<article>
+						<h1>Simple Way to Organize Your Inspirations</h1>
+						<p>I think what motivates people is not great hate, but great love for other people.</p>
+					</article>
+					<aside>
+						<h1>Sign Up for Free</h1>
+						<form action="" method="post">
+							<input type="text" name="name" id="name" placeholder="Name" />
+							<input type="email" name="email" id="email" placeholder="E-Mail" />
+							<div>
+								<input type="password" name="password" id="password" placeholder="Password" /><label for="togglePass" class="icon-eye"></label>
+								<input type="checkbox" name="togglePass" id="togglePass" />
+							</div>
+							<input type="submit" name="submit" id="submit" value="Sign up >" />
+						</form>
+						<p>By clicking "Sign Up" I agree to our<br /><a href="#">Terms of Service</a></p>
+					</aside>
+				</main>
+				<footer>
+					<div class="footer__left">
+						<p>&copy; 2016 Stamp. All rights reserved.</p>
+					</div>
+					<div class="footer__right">
+						<nav class="footer__right__navigation">
+							<ul>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Help</a></li>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</nav>
+					</div>
+				</footer>
+			</div>
+			<div class="sidebar">
+				<nav class="sidebar__main-navigation">
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Integrations</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">Contacts</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<script>
+			const showPasswordButton = document.getElementById('togglePass');
+			const passwordField = document.getElementById('password');
+			const passwordShowIcon = document.querySelector('form div label');
+			
+			showPasswordButton.addEventListener('change', function()	{
+				if (showPasswordButton.checked)	{
+					passwordField.type = 'text'
+					passwordShowIcon.setAttribute('class', 'icon-eye-blocked')
+				}	else {
+					passwordField.type = 'password'
+					passwordShowIcon.setAttribute('class', 'icon-eye')
+				}
+			})
+		</script>
+	</body>
+</html>
